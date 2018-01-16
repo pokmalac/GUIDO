@@ -10,9 +10,15 @@
         <TextBox x:Name="simlpleGuidInput" Height="29" Margin="10,35,94,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" VerticalContentAlignment="Center" Padding="5,0,0,0" FontFamily="Open Sans Light" TextChanged="simlpleGuidInput_TextChanged" Text="0873b0cd-d29a-4ffc-a861-851461d90282"/>
         <Label x:Name="simpleErrorLabel" Content="" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Width="446" Background="#00000000" Foreground="#FFF30C0C" FontWeight="Bold" FontFamily="Open Sans Light" Visibility="Collapsed"/>
         <Button x:Name="convertBtn" Content="Convert" HorizontalAlignment="Left" Margin="316,35,0,0" VerticalAlignment="Top" Width="75" Height="29" Click="convertBtn_Click" FontFamily="Open Sans Light"/>
-        <StackPanel Margin="10,95,94,21" Orientation="Vertical" Background="WhiteSmoke">
-            <TextBox x:Name="simpleFormGuidBox" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" BorderBrush="{x:Null}" Background="{x:Null}" VerticalContentAlignment="Center" FontFamily="Consolas" FontSize="14" Foreground="#FFDA1414"/>
-            <TextBox x:Name="properFormGuidBox" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" BorderBrush="{x:Null}" Background="{x:Null}" VerticalContentAlignment="Center" FontFamily="Consolas" FontSize="14" Foreground="#FFDA1414"/>
+        <StackPanel Margin="10,95,94,10" Orientation="Vertical" Background="WhiteSmoke">
+            <TextBox x:Name="simpleFormGuidBox" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" BorderBrush="{x:Null}" Background="{x:Null}" VerticalContentAlignment="Center" FontFamily="Consolas" FontSize="14" Foreground="#FFDA1414" SelectionBrush="{x:Null}" Padding="3,0,0,0" BorderThickness="0" SelectionOpacity="-1" AllowDrop="False"/>
+            <TextBox x:Name="properFormGuidBox" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="301" BorderBrush="{x:Null}" Background="{x:Null}" VerticalContentAlignment="Center" FontFamily="Consolas" FontSize="14" Foreground="#FFDA1414" SelectionBrush="{x:Null}" Padding="3,0,0,0" BorderThickness="0"/>
         </StackPanel>
+        <Button x:Name="copySimpleBtn" HorizontalAlignment="Left" Margin="316,95,0,0" Width="18" BorderBrush="{x:Null}" Background="{x:Null}" Height="18" VerticalAlignment="Top" Visibility="Hidden" Click="copySimpleBtn_Click">
+            <Image x:Name="image" Source="images/copy-document.png" RenderTransformOrigin="-0.492,-0.658"/>
+        </Button>
+        <Button x:Name="copyProperBtn" HorizontalAlignment="Left" Margin="316,132,0,0" BorderBrush="{x:Null}" Background="{x:Null}" VerticalAlignment="Top" Click="copyProperBtn_Click" ScrollViewer.VerticalScrollBarVisibility="Disabled" UseLayoutRounding="False" Width="18" Visibility="Hidden">
+            <Image x:Name="image1" Source="images/copy-document.png" RenderTransformOrigin="-0.492,-0.658"/>
+        </Button>
     </Grid>
 </Window>

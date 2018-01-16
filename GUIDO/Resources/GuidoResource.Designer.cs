@@ -63,6 +63,16 @@ namespace GUIDO.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap copy_document {
+            get {
+                object obj = ResourceManager.GetObject("copy_document", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap guido {
             get {
                 object obj = ResourceManager.GetObject("guido", resourceCulture);

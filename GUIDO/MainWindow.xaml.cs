@@ -36,10 +36,13 @@ namespace GUIDO
             {
                 this.simpleFormGuidBox.Text = parsedGuid.ToString("N");
                 this.properFormGuidBox.Text = parsedGuid.ToString();
+                this.copySimpleBtn.Visibility = Visibility.Visible;
+                this.copyProperBtn.Visibility = Visibility.Visible;
             }
             else
             {
                 this.ShowError(GuidoResource.InvalidGuid);
+                this.ClearFormattedValues();
             }
             this.convertBtn.IsEnabled = true;
         }
@@ -62,6 +65,25 @@ namespace GUIDO
         {
             this.simpleErrorLabel.Visibility = Visibility.Visible;
             this.simpleErrorLabel.Content = error;
+        }
+
+        private void ClearFormattedValues()
+        {
+            this.properFormGuidBox.Clear();
+            this.simpleFormGuidBox.Clear();
+            this.copySimpleBtn.Visibility = Visibility.Hidden;
+            this.copyProperBtn.Visibility = Visibility.Hidden;
+        }
+
+        private void copySimpleBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText(this.simpleFormGuidBox.Text);
+        }
+
+        private void copyProperBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText(this.properFormGuidBox.Text);
+
         }
     }
 }
